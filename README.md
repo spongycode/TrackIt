@@ -1,4 +1,10 @@
-# 📈 Trackit
+
+<p align="center">
+<img src="assests/trackit_icon.png" alt="drawing" width="100" /></br></br>
+</p>
+
+# 📈 Trackit 
+
 
 Trackit is a React Native expense tracker app that helps you keep track of your income and expenses. The app displays your total balance, total income, and total expense on the home screen. You can also view a list of all your income and expense entries sorted by date, and edit or delete any entry as needed. In addition, the app allows you to add new income or expense entries and persistently stores them.
 
@@ -31,6 +37,15 @@ Trackit currently includes the following features:
 - Ability to add new income or expense entries ➕
 - Persistent storage of added entries 💾
 - Profile screen with user profile data retrieved from an API 🧑‍💼
+
+## 📷 Previews
+
+<p align="center">
+<img src="assests/pic0.png" alt="drawing" width="400" /></br></br>
+<img src="assests/pic1.png" alt="drawing" width="400" /></br></br>
+<img src="assests/pic2.png" alt="drawing" width="200" /></br></br>
+</p>
+
 
 ## 🤝 Contributing
 

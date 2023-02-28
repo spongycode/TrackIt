@@ -29,7 +29,7 @@ const TextInputsAndButtons = (props: any) => {
         style={[styles.input, {color: '#626058', backgroundColor: '#EBEBE4'}]}
         onChangeText={props.setDate}
         value={props.date}
-        // editable={false}
+        editable={false}
         placeholder="Date"
       />
 

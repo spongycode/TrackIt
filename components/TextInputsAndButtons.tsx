@@ -6,11 +6,11 @@ import {
   StyleSheet,
 } from 'react-native';
 import React from 'react';
-import {giveValidEntry, showToast} from '../utils';
+import { giveValidEntry, showToast } from '../utils';
 
 const TextInputsAndButtons = (props: any) => {
   return (
-    <View style={{alignItems: 'center'}}>
+    <View style={{ alignItems: 'center' }}>
       <TextInput
         style={styles.input}
         onChangeText={props.setPrice}
@@ -26,7 +26,7 @@ const TextInputsAndButtons = (props: any) => {
         placeholder="Description"
       />
       <TextInput
-        style={[styles.input, {color: '#626058', backgroundColor: '#EBEBE4'}]}
+        style={[styles.input, { color: '#626058', backgroundColor: '#EBEBE4' }]}
         onChangeText={props.setDate}
         value={props.date}
         editable={false}
@@ -83,6 +83,7 @@ const TextInputsAndButtons = (props: any) => {
 const styles = StyleSheet.create({
   input: {
     borderColor: '#D3D3D3',
+    color: "#000",
     width: '90%',
     borderWidth: 2,
     borderRadius: 10,

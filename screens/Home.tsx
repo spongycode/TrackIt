@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import {Text, StyleSheet, View} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import React, { useEffect, useState } from 'react';
+import { Text, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Modal from 'react-native-modal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';
-import {giveTodaysDate, giveValidEntry, toastConfig} from '../utils';
+import { giveTodaysDate, giveValidEntry, toastConfig } from '../utils';
 import CustomAppBar from '../components/CustomAppBar';
 import DashboardBalanceView from '../components/DashboardBalanceView';
 import TransactionListView from '../components/TransactionListView';
@@ -24,7 +24,7 @@ const Home = () => {
   const [mainIncome, setMainIncome] = useState('');
   const [mainExpense, setMainExpense] = useState('');
   const [isModalVisible, setModalVisible] = useState(false);
-  const [isIncomeState, setIsIncomeState] = useState(true);
+  const [isIncomeState, setIsIncomeState] = useState(false);
   const [isEditMode, setIsEditMode] = useState(true);
 
   const toggleModal = () => {
@@ -142,7 +142,7 @@ const Home = () => {
     setPrice('');
     setTitle('');
     setDate(giveTodaysDate);
-    setIsIncomeState(true);
+    setIsIncomeState(false);
   };
 
   useEffect(() => {
@@ -154,7 +154,7 @@ const Home = () => {
   }, [transactions]);
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{ flex: 1 }}>
       <CustomAppBar title="Home" />
 
       <DashboardBalanceView
@@ -187,7 +187,7 @@ const Home = () => {
         animationOutTiming={500}
         backdropTransitionInTiming={1000}
         backdropTransitionOutTiming={500}
-        style={{justifyContent: 'flex-end', margin: 0}}>
+        style={{ justifyContent: 'flex-end', margin: 0 }}>
         <View style={styles.modalContent}>
           <MaterialCommunityIcons
             style={styles.modalClose}

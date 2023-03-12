@@ -1,16 +1,16 @@
-import {AppBar} from '@react-native-material/core';
+import { AppBar } from '@react-native-material/core';
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import {useNavigation} from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/core';
 
 const CustomAppBar = (props: any) => {
   const navigation = useNavigation();
   return (
     <AppBar
       style={styles.appbar}
-      title={<Text style={styles.titleText}>{props.title}</Text>}
+      title={<Text style={styles.titleText}>{props.title !== 'Home' ? props.title : 'TrackIt'}</Text>}
       centerTitle
       color="#F9C201"
       tintColor="#fff"
@@ -18,7 +18,7 @@ const CustomAppBar = (props: any) => {
         props.title !== 'Home' ? (
           <TouchableOpacity>
             <MaterialCommunityIcons
-              style={{marginLeft: 10}}
+              style={{ marginLeft: 10 }}
               name="keyboard-backspace"
               size={35}
               color="#fff"
@@ -33,7 +33,7 @@ const CustomAppBar = (props: any) => {
         props.title == 'Home' ? (
           <TouchableOpacity>
             <MaterialCommunityIcons
-              style={{marginRight: 10}}
+              style={{ marginRight: 10 }}
               name="account-circle-outline"
               size={35}
               color="#fff"

@@ -1,14 +1,14 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
-import {giveTodaysDate} from '../utils';
-import {FlatList} from 'react-native';
+import { giveTodaysDate } from '../utils';
+import { FlatList } from 'react-native';
 
 const TransactionListView = (props: any) => {
   return (
-    <View style={{height: 400, marginTop: 10}}>
+    <View style={{ height: 400, marginTop: 10 }}>
       <FlatList
         data={props.transactions}
-        renderItem={({item}) => {
+        renderItem={({ item }) => {
           let showDate: boolean = false;
 
           if (item.price === '') {
@@ -56,16 +56,16 @@ const TransactionListView = (props: any) => {
                       shadowRadius: 100,
                       backgroundColor: '#fff',
                     }}>
-                    <Text style={{color: '#626058', fontWeight: 'bold'}}>
+                    <Text style={{ color: '#626058', fontWeight: 'bold' }}>
                       {item.title}
                     </Text>
                     {item.isIncomeState ? (
-                      <Text style={{color: '#00B152', fontWeight: 'bold'}}>
-                        ${item.price}
+                      <Text style={{ color: '#00B152', fontWeight: 'bold' }}>
+                        ₹{item.price}
                       </Text>
                     ) : (
-                      <Text style={{color: '#D10000', fontWeight: 'bold'}}>
-                        ${item.price}
+                      <Text style={{ color: '#D10000', fontWeight: 'bold' }}>
+                        ₹{item.price}
                       </Text>
                     )}
                   </View>
